@@ -1,0 +1,109 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- BepInEx Properties -->
+    <PropertyGroup>
+        <AssemblyName>OomJan.BetterLethalVRM</AssemblyName>
+        <Product>BetterLethalVRM</Product>
+        <!-- Change to whatever version you're currently on. -->
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <!-- Project Properties -->
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <RootNamespace>OomJan</RootNamespace>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <!-- Enable Nullable for better IDE null-checking -->
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- Set NuGet Sources -->
+    <PropertyGroup>
+        <RestoreAdditionalProjectSources>
+            https://api.nuget.org/v3/index.json;
+            https://nuget.bepinex.dev/v3/index.json
+        </RestoreAdditionalProjectSources>
+    </PropertyGroup>
+
+    <!-- Embed Debug Symbols for Easier Debugging -->
+    <PropertyGroup>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>embedded</DebugType>
+        <!--
+        Trim the project path to prevent players from potentially
+        viewing Private Information in stack traces.
+        -->
+        <PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
+        <Company>OomJan</Company>
+        <Authors>OomJan</Authors>
+        <Copyright>MIT License</Copyright>
+    </PropertyGroup>
+
+    <!-- Primary Package References -->
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" Version="5.*" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" PrivateAssets="all" />
+        <PackageReference Include="LethalCompany.GameLibs.Steam" Version="*-*" PrivateAssets="all" />
+        <PackageReference Include="UnityEngine.Modules" Version="2022.3.9" IncludeAssets="compile" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="FastSpringBone10">
+        <HintPath>..\Unity\Library\ScriptAssemblies\FastSpringBone10.dll</HintPath>
+      </Reference>
+      <Reference Include="MToon">
+        <HintPath>..\Unity\Library\ScriptAssemblies\MToon.dll</HintPath>
+      </Reference>
+      <Reference Include="UniGLTF">
+        <HintPath>..\Unity\Library\ScriptAssemblies\UniGLTF.dll</HintPath>
+      </Reference>
+      <Reference Include="UniGLTF.Utils">
+        <HintPath>..\Unity\Library\ScriptAssemblies\UniGLTF.Utils.dll</HintPath>
+      </Reference>
+      <Reference Include="UniHumanoid">
+        <HintPath>..\Unity\Library\ScriptAssemblies\UniHumanoid.dll</HintPath>
+      </Reference>
+      <Reference Include="VRM10">
+        <HintPath>..\Unity\Library\ScriptAssemblies\VRM10.dll</HintPath>
+      </Reference>
+      <Reference Include="VrmLib">
+        <HintPath>..\Unity\Library\ScriptAssemblies\VrmLib.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.GLTF.IO.Runtime">
+        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.GLTF.IO.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.GLTF.UniUnlit.Runtime">
+        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.GLTF.UniUnlit.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.VRM.IO.Runtime">
+        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.VRM.IO.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.VRM10.Format.Runtime">
+        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.VRM10.Format.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.VRM10.MToon10.Runtime">
+        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.VRM10.MToon10.Runtime.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="bundle.asset">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="..\LICENSE.md">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+	  <None Update="..\README.md">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+</Project>
