@@ -1,6 +1,6 @@
 # Better Lethal VRM
 
-A VRM mod for Lethal Company based on LethalVRM by Ooseykins. This variant of the mod adds support for springbones, fallback avatars and the possibilty to name your VRM files as your steam name (Steam ID is still supported).
+A VRM mod for Lethal Company based on LethalVRM by Ooseykins. This variant of the mod adds support for springbones, fallback avatars and the possibility to name your VRM files as your steam name (Steam ID is still supported).
 
 Replace player models with custom VRMs. This client mod requires some setup to see other players as VRM avatars. This is a tool specifically for Vtuber collabs, not a general-purpose model replacement for Lethal Company. Do not expect this mod to "just work" right away with your model, some edits to toggles and materials might need to be made. There are no models included with this mod; VRoid Studio (on Steam) models are free and fully compatible.
 
@@ -12,8 +12,8 @@ Browse to your Lethal Company installation (Find the VRM folder by going to your
 
 Create a folder in your Lethal Company folder called "VRMs" (if it does not exist already) and place your VRM file into that folder. Your VRM can be named using your steamID64 (dec) or your Steam username.
 
-Example of using the steamID64: 76561197974711290.vrm
-Example of using the Steam username: OomJan.vrm
+* Example of using the steamID64: 76561197974711290.vrm
+* Example of using the Steam username: OomJan.vrm
 
 Since it is possible that two users have the same steam name, the Steam ID is preferred before the username.
 
@@ -64,7 +64,7 @@ The other reason is that some VRM files are very big, and downloading them each 
 **A:** Yes.
 
 **Q:** Does this mod work with some other mod?
-**A:** ¯\_(ツ)_/¯
+**A:** ¯\\\_(ツ)_/¯
 
 **Q:** Can this mod handle my great, great assets?
 **A:** YES
@@ -100,14 +100,14 @@ https://github.com/OomJan/BetterLethalVRM
 ## Compilation
 
 ### Required software
-* Unity 2021.3.9f1 via Unity Hub
+* Unity 2022.3.9f1 via Unity Hub
 * Microsoft Visual Studio 2022
 
 Check out the GIT repository above and open the Unity project containted in the folder "Unity" to compile all the needed the dependencies. Opening the project is enough and waiting till Unity has build everything. Now you can open the solution in the root folder.
 
 ## License: MIT License
 
-Copyright 2024 OomJan & Ooseykins
+Copyright 2024 OomJan, Ooseykins
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
