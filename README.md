@@ -24,9 +24,11 @@ Create a VRM named "fallback.vrm" and place it into your VRMs folder. When ever 
 ## FAQ
 
 **Q:** Do my friends need the mod to see my avatar?
+
 **A:** Yes.
 
 **Q:** My friends have the mod, why can't they see my avatar?
+
 **A:** The avatars have to be configured on all players clients, with the VRM files named after each appropriate ID. It seems more of a hassle than just automatically sending your avatar when you join a server, but there are 2 reasons this doesn't happen.
 
 Most Vtubers try very hard to keep their model files safe, and sending your VRM to another person can be a little scary. Accidentally joining the wrong player would send them a copy of your model, and the inconvenience can be worth the protection. It's important that you trust the players you're playing or collabing with to not share your model around.
@@ -34,39 +36,51 @@ Most Vtubers try very hard to keep their model files safe, and sending your VRM 
 The other reason is that some VRM files are very big, and downloading them each time you join a server is a lot of data. Things are just a little simpler this way, if a little inconvenient.
 
 **Q:** Why are my arms still the default character?
+
 **A:** This mod only changes the 3rd person model. You will be able to see your own custom model while spectating other players.
 
 **Q:** My avatar is a plain white texture, how do I fix this?
+
 **A:** In most cases this seems to be caused by using a non-MToon shader material when exporting the VRM. Make sure all of the materials are MToon. The console log will show an error about this if a material is not MToon. If changing to MToon doesn't fix things, try using the MToon10 shader if available in your version of UniVRM.
 
 **Q:** My model is very short or very tall, will that break things?
+
 **A:** Hopefully not. The mod will try and scale your character and position the avatar's head at or near the regular player head height. If your model is scaling very strangely compared to the normal Lethal Company character, feel free to message me about this error! Moving the avatar's head bone (start, not end) in the armature before exporting the VRM can be used to change the avatar scale. If the avatar is appearing too big, move it up; too small move it down.
 
 **Q:** Something about my model looks weird, bumpy, or wrong, why?
+
 **A:** Unfortunately this mod requires many hacks and workarounds to make VRM work in Lethal Company. Most material properties from VRM will not carry over very well. This includes outline, non-cutout transparency, emissive, rim lighting, matcap, and maybe more. Some models are purpose built for Vtubing and may use modelling and texturing techniques that just don't look right in game.
 
 **Q:** Does this mod work with MToon shaders?
+
 **A:** No, but use these shaders anyways when exporting your model. VRM does not officially support the rendering pipeline (HDRP) used by Lethal Company. Workarounds were made to import the VRM and MToon materials and make them look like the style of the game, they won't keep their toony appearance.
 
 **Q:** Does this mod work with spring bones?
+
 **A:** Yes.
 
 **Q:** Does this mod work with VSF Avatar, or some other model format?
+
 **A:** No. VSF avatar is a different format with advanced features that would just be ignored on import. LethalVRM is created for Vtubers and targets the most popular avatar format to reach the widest audience possible.
 
 **Q:** Why are all my avatar toggles on?
+
 **A:** There isn't a simple way to configure your character toggles as part of LethalVRM. If your character has toggles such as alternate hair or outfits that you'd like to remain off you will have to create an alternative version of your VRM with these parts removed. There are many VRM guides available online.
 
 **Q:** Why is my thumb all messed up? Why are my hands not holding things?
+
 **A:** The animation skeletons used for VRM and Lethal Company are both very non-standard. I think the broken thumb part is from VRM, and the hands being far away is likely due to the model's shoulders being narrow. There isn't really a fix for either of these things, just try to embrace the crustiness of Lethal Company.
 
 **Q:** Does this mod work with MoreCompany?
+
 **A:** Yes.
 
 **Q:** Does this mod work with some other mod?
+
 **A:** ¯\\\_(ツ)_/¯
 
 **Q:** Can this mod handle my great, great assets?
+
 **A:** YES
 
 ## Technical Stuff
@@ -83,15 +97,15 @@ I don't like speculation on how technical things are handled in mods, so I thoug
 
 - **Handling visibility**: I handle visibility of the model using some simple checks against the player's death state, and some variables as part of their dead body ragdoll. This means there's weirdness of seeing only your characters first-person arms in the cameras since I'm only disabling/enabling the renderers. There is also weirdness involving players killed by the tentacles at HQ that might need fixing. There are probably some fixes to these issues that can be done by using the correct layers for the renderers and camera culling masks, but it needs some investigation.
 
-
 ## Special Thanks
 
-Special thanks to Ooseykins for creating the initial mod and giving me some insight to their work.
+Special thanks to [Ooseykins](https://twitter.com/Ooseykins) for creating the initial mod and giving me some insight to their work.
 
 ## Contact
 
-Discord: oomjan
-Twitter: https://twitter.com/OomJan34
+* Discord: oomjan
+* Telegram: oomjan
+* Twitter: https://twitter.com/OomJan34
 
 ## Source
 
@@ -103,7 +117,7 @@ https://github.com/OomJan/BetterLethalVRM
 * Unity 2022.3.9f1 via Unity Hub
 * Microsoft Visual Studio 2022
 
-Check out the GIT repository above and open the Unity project containted in the folder "Unity" to compile all the needed the dependencies. Opening the project is enough and waiting till Unity has build everything. Now you can open the solution in the root folder.
+Check out the GIT repository above and open the Unity project containted in the folder "Unity" and build the project into a new folder named "Build" within the Unity project directory. Now you can open the solution in the root folder.
 
 ## License: MIT License
 

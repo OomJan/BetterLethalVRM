@@ -1,4 +1,5 @@
 #if MTOON_URP
+using System;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
@@ -17,6 +18,9 @@ namespace VRMShaders.VRM10.MToon10.Runtime
             this.renderPassEvent = renderPassEvent;
         }
 
+#if UNITY_6000_0_OR_NEWER
+        [Obsolete]
+#endif
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             var cmd = CommandBufferPool.Get();
@@ -36,9 +40,20 @@ namespace VRMShaders.VRM10.MToon10.Runtime
                 };
                 var filteringSettings = FilteringSettings.defaultValue;
                 filteringSettings.renderQueueRange = _renderQueueRange;
+#if UNITY_2022_2_OR_NEWER
+                var rendererListParams = new RendererListParams
+                {
+                    cullingResults = renderingData.cullResults,
+                    drawSettings = drawingSettings,
+                    filteringSettings = filteringSettings,
+                };
+                var rendererList = context.CreateRendererList(ref rendererListParams);
+                cmd.DrawRendererList(rendererList);
+#else
                 var renderStateBlock = new RenderStateBlock(RenderStateMask.Nothing);
                 context.DrawRenderers(renderingData.cullResults, ref drawingSettings, ref filteringSettings,
                     ref renderStateBlock);
+#endif
             }
 
             context.ExecuteCommandBuffer(cmd);

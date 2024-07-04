@@ -223,17 +223,23 @@ public class BetterLethalVRMManager : BaseUnityPlugin
 
     private void FindMaskEnemies()
     {
-        var tMaskedEnemies = FindObjectsByType<MaskedPlayerEnemy>(FindObjectsSortMode.None);
-        if (tMaskedEnemies.Any())
-        {
-            foreach (var tMaskedEnemy in tMaskedEnemies)
-            {
-                if (tMaskedEnemy.transform == null || tMaskedEnemy.mimickingPlayer == null) continue;
+        // Disabled until further notice as this seems to be causing major lag when there are masked enemies mimicking a player.
+        //var tMaskedEnemies = FindObjectsByType<MaskedPlayerEnemy>(FindObjectsSortMode.None);
+        //if (tMaskedEnemies.Any())
+        //{
+        //    foreach (var tMaskedEnemy in tMaskedEnemies)
+        //    {
+        //        // If we dont have a transform or its not mimicking a player, we dont do anything
+        //        if (tMaskedEnemy.transform == null || tMaskedEnemy.mimickingPlayer == null) continue;
 
-                if (Instances.TryGetValue(tMaskedEnemy.mimickingPlayer.playerSteamId, out var tInstance) &&
-                    tMaskedEnemy.transform != tInstance.PlayerControllerB.transform) tInstance.SetSkeletonMimic(tMaskedEnemy.transform);
-            }
-        }
+        //        if (Instances.TryGetValue(tMaskedEnemy.mimickingPlayer.playerSteamId, out var tInstance) &&
+        //            tMaskedEnemy.transform != tInstance.PlayerControllerB.transform)
+        //        {
+        //            Debug.Log($"BetterLethalVRM Mask mimicking {tInstance.PlayerControllerB.name}");
+        //            tInstance.SetSkeletonMimic(tMaskedEnemy.transform);
+        //        }
+        //    }
+        //}
     }
 
     private async void LoadModelToPlayer(string Path, PlayerControllerB Player)

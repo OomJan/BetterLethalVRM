@@ -28,6 +28,7 @@ namespace OomJan.BetterLethalVRM
             DeadMap = new Dictionary<Transform, Transform>();
 
             if (PlayerControllerB.deadBody != null && PlayerControllerB.deadBody.transform == Root) Root.name = "spine";
+
             foreach (var tBoneTranslation in BoneTranslation)
             {
                 var tTransform = Root.FindDescendant(tBoneTranslation.source.parent.name);

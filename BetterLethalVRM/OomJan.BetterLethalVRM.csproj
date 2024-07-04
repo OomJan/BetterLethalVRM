@@ -58,40 +58,40 @@
 
     <ItemGroup>
       <Reference Include="FastSpringBone10">
-        <HintPath>..\Unity\Library\ScriptAssemblies\FastSpringBone10.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\FastSpringBone10.dll</HintPath>
       </Reference>
       <Reference Include="MToon">
-        <HintPath>..\Unity\Library\ScriptAssemblies\MToon.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\MToon.dll</HintPath>
       </Reference>
       <Reference Include="UniGLTF">
-        <HintPath>..\Unity\Library\ScriptAssemblies\UniGLTF.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\UniGLTF.dll</HintPath>
       </Reference>
       <Reference Include="UniGLTF.Utils">
-        <HintPath>..\Unity\Library\ScriptAssemblies\UniGLTF.Utils.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\UniGLTF.Utils.dll</HintPath>
       </Reference>
       <Reference Include="UniHumanoid">
-        <HintPath>..\Unity\Library\ScriptAssemblies\UniHumanoid.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\UniHumanoid.dll</HintPath>
       </Reference>
       <Reference Include="VRM10">
-        <HintPath>..\Unity\Library\ScriptAssemblies\VRM10.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\VRM10.dll</HintPath>
       </Reference>
       <Reference Include="VrmLib">
-        <HintPath>..\Unity\Library\ScriptAssemblies\VrmLib.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\VrmLib.dll</HintPath>
       </Reference>
       <Reference Include="VRMShaders.GLTF.IO.Runtime">
-        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.GLTF.IO.Runtime.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\VRMShaders.GLTF.IO.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="VRMShaders.GLTF.UniUnlit.Runtime">
-        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.GLTF.UniUnlit.Runtime.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\VRMShaders.GLTF.UniUnlit.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="VRMShaders.VRM.IO.Runtime">
-        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.VRM.IO.Runtime.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\VRMShaders.VRM.IO.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="VRMShaders.VRM10.Format.Runtime">
-        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.VRM10.Format.Runtime.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\VRMShaders.VRM10.Format.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="VRMShaders.VRM10.MToon10.Runtime">
-        <HintPath>..\Unity\Library\ScriptAssemblies\VRMShaders.VRM10.MToon10.Runtime.dll</HintPath>
+        <HintPath>..\Unity\Build\build\bin\VRM_Data\Managed\VRMShaders.VRM10.MToon10.Runtime.dll</HintPath>
       </Reference>
     </ItemGroup>
 

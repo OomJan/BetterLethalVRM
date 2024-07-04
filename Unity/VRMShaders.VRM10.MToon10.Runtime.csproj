@@ -70,14 +70,20 @@
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\Properties\MToon10Properties.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToon10Migrator.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\MToonDefinedValues\MToon10DoubleSidedMode.cs" />
+    <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToon0X\MToon0XUtilsGetter.cs" />
+    <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToonMaterialMigrator.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToonValidator.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToonOutlineRenderFeature.cs" />
+    <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToon0X\MToon0XUtils.cs" />
+    <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToon0X\MToon0XEnums.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\MToonDefinedValues\MToon10RimMapKeyword.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\Properties\MToon10Prop.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\MToonDefinedValues\MToon10ParameterMapKeyword.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\MToonDefinedValues\MToon10TransparentWithZWriteMode.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\ShaderLabDefinedValues\UnityZWriteMode.cs" />
+    <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToon0X\MToon0XUtilsVersion.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\ShaderLabDefinedValues\UnityAlphaModeKeyword.cs" />
+    <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\MToon0X\MToon0XDefinition.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\ShaderLabDefinedValues\UnityCullMode.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\MToonDefinedValues\MToon10EmissiveMapKeyword.cs" />
     <Compile Include="Assets\VRMShaders\VRM10\MToon10\Runtime\UnityShaderLab\ShaderLabDefinedValues\UnityAlphaToMaskMode.cs" />
@@ -342,7 +348,7 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -360,13 +366,13 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.3.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

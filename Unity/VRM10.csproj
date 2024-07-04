@@ -146,6 +146,7 @@
     <Compile Include="Assets\VRM10\Runtime\ControlRig\AnimatorPoseProvider.cs" />
     <Compile Include="Assets\VRM10\Runtime\IO\Material\BuiltInRP\Export\Materials\BuiltInVrm10MToonMaterialExporter.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Instance\Vrm10Instance.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBoneExtendedCollider\Deserializer.g.cs" />
     <Compile Include="Assets\VRM10\Runtime\Scenes\Sample.cs" />
     <Compile Include="Assets\VRM10\Runtime\Format\SpringBone\Format.g.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\Expression\ILookAtEyeDirectionApplicable.cs" />
@@ -157,6 +158,7 @@
     <Compile Include="Assets\VRM10\Runtime\ControlRig\InitialRotations\XR_FB_body_tracking.cs" />
     <Compile Include="Assets\VRM10\Runtime\ControlRig\INormalizedPoseApplicable.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\LookAt\ILookAtEyeDirectionProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBoneExtendedCollider\Serializer.g.cs" />
     <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVrmSpringBone.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\Constraint\TR.cs" />
     <Compile Include="Assets\VRM10\Runtime\IO\Vrm10Importer.cs" />
@@ -168,6 +170,7 @@
     <Compile Include="Assets\VRM10\Runtime\Format\VrmHumanoidBones\Vrm10HumanoidBones.cs" />
     <Compile Include="Assets\VRM10\Runtime\IO\Vrm10.cs" />
     <Compile Include="Assets\VRM10\Runtime\Format\Vrm\Serializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBoneExtendedCollider\Format.g.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\Expression\MorphTargetBindingMerger\MorphTargetIdentifier.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\Constraint\Vrm10RotationConstraint.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\Expression\Preview\PreviewSceneManager.cs" />
@@ -472,7 +475,7 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -490,13 +493,13 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.3.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -878,10 +881,6 @@
     <ProjectReference Include="VrmLib.csproj">
       <Project>{87BC656A-94EA-3C6B-6E9C-B8FD9F9D1B34}</Project>
       <Name>VrmLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="MToon.csproj">
-      <Project>{E2E2E8B3-208C-B569-303F-A020E564116B}</Project>
-      <Name>MToon</Name>
     </ProjectReference>
     <ProjectReference Include="UniGLTF.csproj">
       <Project>{E3D7BC9D-6712-1F23-6402-85081306D836}</Project>

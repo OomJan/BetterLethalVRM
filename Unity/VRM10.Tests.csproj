@@ -62,6 +62,7 @@
     <Compile Include="Assets\VRM10\Tests\ApiSampleTests.cs" />
     <Compile Include="Assets\VRM10\Tests\SerializationTests.cs" />
     <Compile Include="Assets\VRM10\Tests\ExpressionTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\Vrm10ApiTests.cs" />
     <Compile Include="Assets\VRM10\Tests\TestAsset.cs" />
     <Compile Include="Assets\VRM10\Tests\MaterialImportTests.cs" />
     <Compile Include="Assets\VRM10\Tests\LoadTests.cs" />
